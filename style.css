@@ -1,8 +1,9 @@
 #countLabel{
   display: block;
   text-align: center;
-  font-size: 10em;
+  font-size: 25em;
   font-family: Helvetica;
+  transition: 2.5s;
 }
 
 #btnCountainer{
@@ -11,17 +12,19 @@
 
 .buttons{
   padding: 10px 20px;
-  font-size: .8em;
+  font-size: 5em;
   color: white;
   background-color: rgb(11, 96, 138);
-  border-radius: 3px;
+  border-radius: 15px;
   cursor: pointer;
   border: 0cm;
-  transition: transform 0.5;
+  transition: .5s;
+  float: center;
+  padding-right: 10px;
 }
 
 .buttons:hover{
-  opacity: .8;
+  opacity: .7;
 }
 
 .buttons:active{
