@@ -1,20 +1,12 @@
-const decreasBtn = document.getElementById("decreasBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-const countLabel = document.getElementById("countLabel");
-let count = 0;
+const reveals = document.querySelectorAll('.reveal');
 
-increaseBtn.onclick = function(){
-  count++;
-  countLabel.textContent = count;
-}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
 
-decreasBtn.onclick = function(){
-  count--;
-  countLabel.textContent = count;
-}
-
-resetBtn.onclick = function(){
-  count = 0;
-  countLabel.textContent = count
-}
+reveals.forEach(el => observer.observe(el));
