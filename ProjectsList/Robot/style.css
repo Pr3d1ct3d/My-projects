@@ -56,6 +56,12 @@ body {
 #link:active {
   transform: rotate();
 }
+.parentEl .hrf {
+  text-align: left;
+
+  font-weight: bold;
+  font-size: 2em;
+}
 
 /*mobile stuff */
 @media (max-width: 768px) {
