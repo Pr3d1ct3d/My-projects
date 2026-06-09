@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap");
 
 :root {
-  --ink:   #0d0d0f;
+  --ink: #0d0d0f;
   --paper: #f0ece5;
-  --text:  #e8e4dd;
-  --muted: rgba(232,228,221,0.45);
-  --faint: rgba(232,228,221,0.08);
-  --gold:  #c8a96e;
-  --serif: 'DM Serif Display', serif;
-  --mono:  'DM Mono', monospace;
+  --text: #e8e4dd;
+  --muted: rgba(232, 228, 221, 0.45);
+  --faint: rgba(232, 228, 221, 0.08);
+  --gold: #c8a96e;
+  --serif: "DM Serif Display", serif;
+  --mono: "DM Mono", monospace;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: var(--ink);
@@ -25,20 +31,35 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 55% 45% at 90% 0%,  rgba(90,40,130,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 35% at -10% 55%, rgba(30,80,100,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 28% 22% at 85% 95%,  rgba(160,60,60,0.08) 0%, transparent 55%);
+    radial-gradient(
+      ellipse 55% 45% at 90% 0%,
+      rgba(90, 40, 130, 0.18) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 40% 35% at -10% 55%,
+      rgba(30, 80, 100, 0.12) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 28% 22% at 85% 95%,
+      rgba(160, 60, 60, 0.08) 0%,
+      transparent 55%
+    );
   pointer-events: none;
   z-index: 0;
 }
 
-body > * { position: relative; z-index: 1; }
+body > * {
+  position: relative;
+  z-index: 1;
+}
 
-/* ── nav ── */
+/* nav*/
 nav {
   display: flex;
   align-items: center;
@@ -54,7 +75,11 @@ nav {
   text-decoration: none;
 }
 
-.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
 
 .nav-links a {
   font-size: 11px;
@@ -65,11 +90,14 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover,
-.nav-links a.active { color: var(--text); }
+.nav-links a.active {
+  color: var(--text);
+}
 
-
-/* ── hero ── */
-.hero { padding: 64px 40px 40px; }
+/* hero*/
+.hero {
+  padding: 64px 40px 40px;
+}
 
 .hero-eyebrow {
   font-size: 10px;
@@ -82,9 +110,10 @@ nav {
   gap: 10px;
 }
 .hero-eyebrow::before {
-  content: '';
+  content: "";
   display: block;
-  width: 28px; height: 0.5px;
+  width: 28px;
+  height: 0.5px;
   background: var(--gold);
 }
 
@@ -96,10 +125,15 @@ h1 {
   margin-bottom: 0;
   font-weight: 400;
 }
-h1 em { font-style: italic; color: var(--muted); }
+h1 em {
+  font-style: italic;
+  color: var(--muted);
+}
 
-/* ── work section ── */
-.work-section { padding: 40px 40px 48px; }
+/*work*/
+.work-section {
+  padding: 40px 40px 48px;
+}
 
 .work-grid {
   display: grid;
@@ -114,24 +148,30 @@ h1 em { font-style: italic; color: var(--muted); }
 .work-item {
   background: var(--ink);
   padding: 24px;
+  border: #34343c;
   transition: background 0.2s;
 }
-.work-item:hover { background: #141416; }
+.work-item:hover {
+  background: #141416;
+}
 
 .work-num {
   font-size: 10px;
   letter-spacing: 0.15em;
-  color: rgba(232,228,221,0.2);
+  color: rgba(232, 228, 221, 0.2);
   margin-bottom: 14px;
 }
 
-.work-link { text-decoration: none; display: block; }
+.work-link {
+  text-decoration: none;
+  display: block;
+}
 
 .work-thumb {
   position: relative;
   width: 100%;
   aspect-ratio: unset;
-  border-radius: 2px;
+  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 16px;
   background: #1a1a1f;
@@ -142,9 +182,17 @@ h1 em { font-style: italic; color: var(--muted); }
   height: auto;
   object-fit: unset;
   display: block;
-  transition: transform 0.4s ease, opacity 0.3s;
+  border-radius: 10px;
+  border: 3px solid#34343c;
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s;
 }
-.work-item:hover .work-thumb img { transform: scale(1.04); opacity: 0.85; }
+.work-item:hover .work-thumb img {
+  transform: scale(1.02);
+  opacity: 0.85;
+  border: #595966;
+}
 
 .work-overlay {
   position: absolute;
@@ -152,11 +200,13 @@ h1 em { font-style: italic; color: var(--muted); }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(13,13,15,0.5);
+  background: rgba(13, 13, 15, 0.5);
   opacity: 0;
   transition: opacity 0.25s;
 }
-.work-item:hover .work-overlay { opacity: 1; }
+.work-item:hover .work-overlay {
+  opacity: 1;
+}
 
 .play-icon {
   font-size: 28px;
@@ -178,7 +228,7 @@ h1 em { font-style: italic; color: var(--muted); }
   text-transform: uppercase;
 }
 
-/* ── footer ── */
+/* footer */
 footer {
   display: flex;
   align-items: center;
@@ -186,38 +236,62 @@ footer {
   padding: 20px 40px;
   border-top: 0.5px solid var(--faint);
   font-size: 25px;
-  color: rgba(232,228,221,0.3);
+  color: rgba(232, 228, 221, 0.3);
   letter-spacing: 0.08em;
 }
 
-.footer-status { display: flex; align-items: center; gap: 8px; }
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 .status-dot {
-  width: 15px; height: 15px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #4caf7d;
   animation: pulse 2.4s ease-in-out infinite;
 }
 
-/* ── reveal animations ── */
+/* reveal anim */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; }
+.delay-1 {
+  transition-delay: 0.1s;
+}
+.delay-2 {
+  transition-delay: 0.2s;
+}
+.delay-3 {
+  transition-delay: 0.3s;
+}
+.delay-4 {
+  transition-delay: 0.4s;
+}
+.delay-5 {
+  transition-delay: 0.5s;
+}
 
-/* ── animations ── */
+/*anim */
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.4; transform: scale(0.7); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
 }
