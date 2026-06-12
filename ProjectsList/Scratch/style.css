@@ -1,0 +1,48 @@
+:root {
+  --ink: #0d0d0f;
+  --text: #e8e4dd;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: var(--ink);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  /* removed overflow: hidden */
+}
+
+.hrf {
+  float: left;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#link {
+  font-size: 2em;
+}
+
+.parentEl {
+  clear: both; /* so it sits below the floated .hrf link */
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .hrf {
+    font-size: 1.2em;
+  }
+
+  #link {
+    font-size: 1.4em;
+  }
+
+  .iframe iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 482 / 412;
+  }
+}

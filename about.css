@@ -4,7 +4,7 @@
   --ink: #0d0d0f;
   --paper: #f0ece5;
   --text: #e8e4dd;
-  --muted: rgba(232, 228, 221, 0.659);
+  --muted: rgba(237, 234, 228, 0.67);
   --faint: rgba(232, 228, 221, 0.08);
   --gold: #c8a96e;
   --serif: "DM Serif Display", serif;
@@ -416,12 +416,19 @@ footer {
   background: #a40f0f;
   animation: pulse 2s ease-in-out infinite;
 }
+
 .status-dot1 {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #320880;
   animation: pulse 2.5s ease-in-out infinite;
+}
+
+.ProjctLinks {
+  font-weight: bold;
+  font-size: 2em;
+  color: var(--muted);
 }
 
 /*anims*/
